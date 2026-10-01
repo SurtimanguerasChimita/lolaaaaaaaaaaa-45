@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surtimangueras Chimitá | Soluciones Hidráulicas y Mecánicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navegación -->
+<header class="header">
+    <a href="#inicio" class="logo-link">
+        <img src="img/Logo-SurtiMangueras.jpg" alt="Logo Surtimangueras Chimitá" class="site-logo">
+    </a>
+
+    <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#productos">Productos</a>
+        <a href="#emergencias">Horario Atención</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="btn-primary" onclick="contactarWhatsApp('Consulta general')">Escríbenos</button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+</header>
+
+    <!-- Hero Section (Logo Izquierda / Texto Derecha) -->
+    <section id="inicio" class="hero">
+        <div class="hero-image">
+            <img src="img/Logo-SurtiMangueras.jpg" alt="Surtimangueras Chimitá Logo">
+        </div>
+        <div class="hero-content">
+            <h1>Soluciones personalizadas a tú alcance</h1>
+            <p>Ensamble técnio de mangueras, alta y baja presión.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="contactarWhatsApp('Necesito un desvare/repuesto urgente')">Pedir Acompañamiento / Desvare</button>
+                <a href="#productos" class="btn-secondary">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Rapidez -->
+    <section class="strip-info">
+        <div class="strip-item">
+            <strong>⚡ Precisión y Calidad Garantizada</strong>
+        </div>
+        <div class="strip-item">
+            <strong>🛠️ Soldadura Especial</strong>
+        </div>
+        <div class="strip-item">
+            <strong>☀️ Horario Diurno</strong>
+        </div>
+    </section>
+
+    <!-- Servicios (sin imágenes, centrados) -->
+    <section id="servicios" class="services">
+        <h2 class="section-title">Nuestros Servicios Especializados</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3 class="servicio-nombre">Ensamble Técnico De Mangueras Alta y Baja Presión</h3>
+                <button class="btn-card" onclick="contactarWhatsApp('Ensamble técnico de mangueras alta y baja presión')">Saber más</button>
+            </div>
+            <div class="servicio-card">
+                <h3 class="servicio-nombre">Cambios De Manguera</h3>
+                <button class="btn-card" onclick="contactarWhatsApp('Cambio de manguera')">Saber más</button>
+            </div>
+            <div class="servicio-card">
+                <h3 class="servicio-nombre">Cambio De Correas</h3>
+                <button class="btn-card" onclick="contactarWhatsApp('Cambio de correas')">Saber más</button>
+            </div>
+            <div class="servicio-card">
+                <h3 class="servicio-nombre">Soldaduras Especiales</h3>
+                <button class="btn-card" onclick="contactarWhatsApp('Soldaduras especiales')">Saber más</button>
+            </div>
+            <div class="servicio-card">
+                <h3 class="servicio-nombre">Venta De Repuestos</h3>
+                <button class="btn-card" onclick="contactarWhatsApp('Venta de repuestos')">Saber más</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="productos" class="products">
+        <h2 class="section-title">Catálogo de Productos</h2>
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filtrar('todos')">Todos</button>
+                        <button class="tab-btn" onclick="filtrar('Abrazaderas')">Abrazaderas</button>
+            <button class="tab-btn" onclick="filtrar('Mangueras')">Mangueras</button>
+            <button class="tab-btn" onclick="filtrar('Aflojatodo')">Aflojatodo</button>
+            <button class="tab-btn" onclick="filtrar('Aceites')">Aceites</button>
+            <button class="tab-btn" onclick="filtrar('Correas')">Correas</button>
+            <button class="tab-btn" onclick="filtrar('Arandelas')">Arandelas</button>
+            <button class="tab-btn" onclick="filtrar('Rodamiento')">Rodamiento</button>
+            <button class="tab-btn" onclick="filtrar('Acoples')">Acoples</button>
+            <button class="tab-btn" onclick="filtrar('Balbulina')">Balbulina</button>
+            <button class="tab-btn" onclick="filtrar('Arrancador')">Arrancador</button>
+            <button class="tab-btn" onclick="filtrar('Bombona')">Bombona</button>
+            <button class="tab-btn" onclick="filtrar('Boster')">Boster</button>
+            <button class="tab-btn" onclick="filtrar('limpiabrizas')">Limpiabrizas</button>
+            <button class="tab-btn" onclick="filtrar('Cámara')">Cámara</button>
+            <button class="tab-btn" onclick="filtrar('Cemento')">Cemento</button>
+            <button class="tab-btn" onclick="filtrar('Cornetas')">Cornetas</button>
+            <button class="tab-btn" onclick="filtrar('Diafragma')">Diafragma</button>
+            <button class="tab-btn" onclick="filtrar('Gancho')">Gancho</button>
+            <button class="tab-btn" onclick="filtrar('Grasa')">Grasa</button>
+            <button class="tab-btn" onclick="filtrar('Graseras')">Graseras</button>
+            <button class="tab-btn" onclick="filtrar('Guayas')">Guayas</button>
+            <button class="tab-btn" onclick="filtrar('Hidroserveros')">Hidroserveros</button>
+            <button class="tab-btn" onclick="filtrar('Hidráulico')">Hidráulico</button>
+            <button class="tab-btn" onclick="filtrar('Limpiador')">Limpiador</button>
+            <button class="tab-btn" onclick="filtrar('Liquido')">Liquido</button>
+            <button class="tab-btn" onclick="filtrar('Llaves')">Llaves</button>
+            <button class="tab-btn" onclick="filtrar('Peras')">Peras</button>
+            <button class="tab-btn" onclick="filtrar('Calibrador')">Calibrador</button>
+            <button class="tab-btn" onclick="filtrar('Pintura')">Pintura</button>
+            <button class="tab-btn" onclick="filtrar('Pistola')">Pistola</button>
+            <button class="tab-btn" onclick="filtrar('Racores')">Racores</button>
+            <button class="tab-btn" onclick="filtrar('Pintura')">Pintura</button>
+            <button class="tab-btn" onclick="filtrar('Refrigerante')">Refrigerante</button>
+            <button class="tab-btn" onclick="filtrar('Sellador')">Sellador</button>
+            <button class="tab-btn" onclick="filtrar('Silicona')">Silicona</button>
+            <button class="tab-btn" onclick="filtrar('Suncho')">Suncho</button>
+            <button class="tab-btn" onclick="filtrar('Tapas')">Tapas</button>
+            <button class="tab-btn" onclick="filtrar('Válvulas')">Válvulas freno de aire</button>
+            <button class="tab-btn" onclick="filtrar('Balinera')">Balinera</button>
+            <button class="tab-btn" onclick="filtrar('Ventiladores')">Ventiladores</button>
+        </div>
+
+        <div class="products-grid">
+            <div class="prod-card Abrazaderas">
+                <img src="img/Abrazaderas.png" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazadera')">Cotizar</button>
+            </div>
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas de soportte.jpeg" alt="Abrazadera de soporte">
+                <h4>Abrazadera de soporte</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazadera')">Cotizar</button>
+            </div>
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 2.jpg" alt="Abrazaderas de seguridad">
+                <h4>Abrazaderas de seguridad</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas de seguridad')">Cotizar</button>
+            </div>
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 3.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>    
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 4.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>           
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 5.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>          
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 6.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>            
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 7.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>               
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas. 8.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>              
+            <div class="prod-card Abrazaderas">
+                <img src="img/abrazaderas.jpg" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>          
+            <div class="prod-card Abrazaderas">
+                <img src="img/Abrazaderas.png" alt="Abrazaderas">
+                <h4>Abrazaderas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Abrazaderas')">Cotizar</button>
+            </div>           
+            <div class="prod-card Aceites">
+                <img src="img/aceite hidrulico.jpg" alt="Aceite Hidráulico">
+                <h4>Aceite Hidráulico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites')">Cotizar</button>
+            </div>         
+            <div class="prod-card Aceites">
+                <img src="img/aceite hidrulico2.jpg" alt="Aceite Hidráulico">
+                <h4>Aceite Hidráulico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites')">Cotizar</button>
+            </div>           
+            <div class="prod-card Aceites">
+                <img src="img/aceite hidrulico3.jpg" alt="Aceite Hidráulico">
+                <h4>Aceite Hidráulico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites')">Cotizar</button>
+            </div>       
+            <div class="prod-card Aceites">
+                <img src="img/aceite hidrulico4.jpg" alt="Aceite Hidráulico">
+                <h4>Aceite Hidráulico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites')">Cotizar</button>
+            </div>      
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 2.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>               
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 3.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 4.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>                          
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 5.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>              
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 6.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>          
+             <div class="prod-card Aceites">
+                <img src="img/aceite para motores 7.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>          
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 8.png" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>            
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 9.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>             
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 10.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>            
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 11.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>             
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 12.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>              
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 13.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>           
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 14.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>         
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 15.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>         
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 16.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>             
+            <div class="prod-card Aceites">
+                <img src="img/aceite para motores 17.jpg" alt="Aceite para motores">
+                <h4>Aceite para motores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aceites para motores')">Cotizar</button>
+            </div>           
+            <div class="prod-card Acoples">
+                <img src="img/acoples para mangueras hidraulicas.jpg" alt="Acoples para manguera hidráulica">
+                <h4>Acoples para manguera hidráulica</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Acoples para manguera hidráulica')">Cotizar</button>
+            </div>            
+            <div class="prod-card Acoples">
+                <img src="img/acoples rapidos en aluminio.jpg" alt="Acoples rápidos en aluminio">
+                <h4>Acoples rápidos en aluminio</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Acoples rápidos en aluminio')">Cotizar</button>
+            </div>            
+            <div class="prod-card Acoples">
+                <img src="img/acoples rapidos hidrulicos .jpg" alt="Acoples rápidos">
+                <h4>Acoples rápidos</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Acoples rápidos')">Cotizar</button>
+            </div>             
+           <div class="prod-card Rodamiento">
+                <img src="img/aditivo para rodamiento.jpg" alt="Aditivo para rodamiento">
+                <h4>Aditivo para Rodamiento</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aditivo para rodamiento')">Cotizar</button>
+            </div>            
+           <div class="prod-card Aflojatodo">
+                <img src="img/aflojatodo - penetrante antioxidante 2.jpg" alt="Aflojatodo">
+                <h4>Aflojatodo</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aflojatodo')">Cotizar</button>
+            </div>      
+           <div class="prod-card Aflojatodo">
+                <img src="img/aflojatodo - penetrante antioxidante.jpg" alt="Aflojatodo">
+                <h4>Aflojatodo</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Aflojatodo')">Cotizar</button>
+            </div>           
+           <div class="prod-card Arandelas">
+                <img src="img/arandelas para sello encuachetadas.jpg" alt="Arandelas para sello">
+                <h4>Arandelas para sello</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Arandelas para sello')">Cotizar</button>
+            </div>                
+           <div class="prod-card Arrancador de motores">
+                <img src="img/Arrancador de motores en frio.jpg" alt="Arrancador de motores">
+                <h4>Arrancador de motores en frío</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Arrancador de motores en frío')">Cotizar</button>
+            </div>      
+           <div class="prod-card Balbulina">
+                <img src="img/Balbulina para transmision.jpg" alt="Balbulina para transmisión">
+                <h4>Balbulina para transmisión</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Balbulina para transmisión')">Cotizar</button>
+            </div>
+            <div class="prod-card Bombona de suspension">
+                <img src="img/bombona de suspension.jpeg" alt="Bombona de suspensión">
+                <h4>Bombona de suspensión</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Bombona de suspensión')">Cotizar</button>
+            </div>                
+           <div class="prod-card Boster freno de agua">
+                <img src="img/boster para freno de agua.jpg" alt="Boster freno de agua">
+                <h4>Boster freno de agua</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Boster para freno de agua')">Cotizar</button>
+            </div>             
+            <div class="prod-card limpiabrizas">
+    <img src="img/brazos para limpiabrizas.jpeg" alt="Brazos limpiabrizas">
+    <h4>Brazos limpiabrizas</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Brazos para limpiabrizas')">Cotizar</button>
+</div>       
+            <div class="prod-card Cámara freno de seguridad">
+                <img src="img/camaras para freno de seguridad.jpg" alt="Cámara freno de seguridad">
+                <h4>Cámara para freno de seguridad</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Cámara para freno de seguridad')">Cotizar</button>
+            </div>          
+            <div class="prod-card Mangueras">
+                <img src="img/carraco para forro de mangueras.jpg" alt="Mangueras">
+                <h4>Carraco para forro de manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Cámara para freno de seguridad')">Cotizar</button>
+            </div>           
+            <div class="prod-card Cemento radiadores">
+                <img src="img/cemento para radiadores.jpg" alt="Cemento radiadores">
+                <h4>Cemento para radiadores</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Cemento para radiadores')">Cotizar</button>
+            </div>             
+            <div class="prod-card Cornetas de aire">
+                <img src="img/cornetas de aire.jpeg" alt="Cornetas de aire">
+                <h4>Cornetas de aire</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Cornetas de aire')">Cotizar</button>
+            </div>              
+            <div class="prod-card Correas">
+                <img src="img/correas para accesorios vehicular.jpg" alt="Correas para accesorios">
+                <h4>Correas para accesorios</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Correas para accesorios')">Cotizar</button>
+            </div>              
+            <div class="prod-card Diafragma para cámara de freno">
+                <img src="img/Diafragmas para cámara de freno.png" alt="Diafragma para cámara de freno">
+                <h4>Diafragma para cámara de freno</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Diafragma para cámara de freno')">Cotizar</button>
+            </div>               
+            <div class="prod-card Gancho para careta">
+                <img src="img/gancho para careta.jpg" alt="Gancho para careta">
+                <h4>Gancho para careta</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Gancho para careta')">Cotizar</button>
+            </div>               
+            <div class="prod-card Grasa para rodamientos">
+                <img src="img/Grasa para rodamientos.jpg" alt="Grasa para rodamientos">
+                <h4>Grasa para rodamientos</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Grasa para rodamientos')">Cotizar</button>
+            </div>                
+            <div class="prod-card Graseras">
+                <img src="img/graseras.jpg" alt="Graseras">
+                <h4>Graseras</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Graseras')">Cotizar</button>
+            </div>              
+            <div class="prod-card Guayas de control de cambio">
+                <img src="img/guayas de control de cambio.jpeg" alt="Guayas de control de cambio">
+                <h4>Guayas de control de cambio</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Guayas de control de cambio')">Cotizar</button>
+            </div>             
+            <div class="prod-card Guayas de control de cambio">
+                <img src="img/guayas de control de cambio2.webp" alt="Guayas de control de cambio">
+                <h4>Guayas de control de cambio</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Guayas de control de cambio')">Cotizar</button>
+            </div>            
+             <div class="prod-card Hidroserveros para clutch">
+                <img src="img/hidroservos para close.jpg" alt="Hidroserveros para clutch">
+                <h4>Hidroserveros para clutch</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Hidroserveros para clutch')">Cotizar</button>
+            </div>             
+             <div class="prod-card Hidráulico">
+                <img src="img/hidrualico.jpg" alt="Hidráulico">
+                <h4>Hidráulico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Hidráulico')">Cotizar</button>
+            </div>                
+             <div class="prod-card Limpiador Electronico">
+                <img src="img/limpiador electronico.jpg" alt="Limpiador Electronico">
+                <h4>Limpiador Electronico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Limpiador Electronico')">Cotizar</button>
+            </div>            
+             <div class="prod-card Limpiador Electronico">
+                <img src="img/Limpiador Electronico.webp" alt="Limpiador Electronico">
+                <h4>Limpiador Electronico</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Limpiador Electronico')">Cotizar</button>
+            </div>            
+             <div class="prod-card Liquido de frenos">
+                <img src="img/liquido de frenos.jpg" alt="Liquido de frenos">
+                <h4>Liquido de frenos</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Liquido de frenos')">Cotizar</button>
+            </div>          
+             <div class="prod-card Llaves de paso rápido">
+                <img src="img/llaves de paso rapido.jpg" alt="Llaves de paso rápido">
+                <h4>Llaves de paso rápido</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Llaves de paso rápido')">Cotizar</button>
+            </div>              
+             <div class="prod-card Llaves de paso rápido">
+                <img src="img/llaves de paso rapido 2.jpeg" alt="Llaves de paso rápido">
+                <h4>Llaves de paso rápido</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Llaves de paso rápido')">Cotizar</button>
+            </div>            
+             <div class="prod-card Llaves de paso rápido">
+                <img src="img/llaves de paso rapido 3 tipomariposa.jpeg" alt="Llaves de paso rápido">
+                <h4>Llaves de paso rápido Tipo Mariposa</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Llaves de paso rápido Tipo Mariposa')">Cotizar</button>
+            </div>                       
+             <div class="prod-card Mangueras">
+                <img src="img/manguera cristal.jpg" alt="Manguera Cristal">
+                <h4>Manguera Cristal</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Cristal')">Cotizar</button>
+            </div>              
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 10.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>               
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 11.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>                
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 12.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>          
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 2.jpeg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>         
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 3.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>          
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 4.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>             
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 5.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 6.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>           
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 7.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>             
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 8.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras 9.jpg" alt="Manguera">
+                <h4>Manguera</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera')">Cotizar</button>
+            </div>           
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras hidrulicas 2.jpg" alt="Manguera Hidráulica">
+                <h4>Manguera Hidráulica</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Hidráulica')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras hidrulicas 3.jpg" alt="Manguera Hidráulica">
+                <h4>Manguera Hidráulica</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Hidráulica')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras hidrulicas 4.jpg" alt="Manguera Hidráulica">
+                <h4>Manguera Hidráulica</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Hidráulica')">Cotizar</button>
+            </div>          
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras hidrulicas.jpg" alt="Manguera Hidráulica">
+                <h4>Manguera Hidráulica</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Hidráulica')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/mangueras silicona por yardas.jpg" alt="Manguera Silicona Por Yardas">
+                <h4>Manguera Silicona Por Yardas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Silicona Por Yardas')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/Mangueras en silicona para interculer.jpg" alt="Manguera Silicona Para Interculer">
+                <h4>Manguera Silicona Para Interculer</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Manguera Silicona Para Interculer')">Cotizar</button>
+            </div>           
+             <div class="prod-card Mangueras">
+                <img src="img/Mangueras sopla cabinas.png" alt="Mangueras Sopla Cabinas">
+                <h4>Mangueras Sopla Cabinas</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Mangueras Sopla Cabinas')">Cotizar</button>
+            </div>            
+             <div class="prod-card Mangueras">
+                <img src="img/Mangueras traider.png" alt="Mangueras Traider">
+                <h4>Mangueras Traider</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Mangueras Traider')">Cotizar</button>
+            </div>         
+             <div class="prod-card Peras para bajo de aire<">
+                <img src="img/peras para bajo de aire.jpg" alt="Peras para bajo de aire<">
+                <h4>Peras para bajo de aire</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Peras para bajo de aire<')">Cotizar</button>
+            </div>           
+             <div class="prod-card Calibrador de aire<">
+                <img src="img/pesadores de aire, calibador de aire.jpg" alt="Calibrador de aire<">
+                <h4>Calibrador de aire</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Peras para bajo de aire<')">Cotizar</button>
+            </div>               
+             <div class="prod-card Pintura en spray<">
+                <img src="img/pintura en sprike.jpg" alt="Pintura en spray<">
+                <h4>Pintura en spray</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Pintura en spray')">Cotizar</button>
+            </div>           
+             <div class="prod-card Pistola Sopla Cabina<">
+                <img src="img/pistola sopla cabina 2.jpg" alt="Pistola Sopla Cabina<">
+                <h4>Pistola Sopla Cabina</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Pistola Sopla Cabina')">Cotizar</button>
+            </div>             
+             <div class="prod-card Pistola Sopla Cabina<">
+                <img src="img/pistola sopla cabina.jpg" alt="Pistola Sopla Cabina<">
+                <h4>Pistola Sopla Cabina</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Pistola Sopla Cabina')">Cotizar</button>
+            </div>               
+<div class="prod-card limpiabrizas">
+    <img src="img/plumillas limpiabrizas .jpg" alt="Plumillas limpiabrizas">
+    <h4>Plumillas Limpiabrizas</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Plumillas Limpiabrizas')">Cotizar</button>
+</div>            
+             <div class="prod-card Racores">
+    <img src="img/racores-neumatico en pasta.jpg" alt="Racores neumático en pasta">
+    <h4>Racores neumático en pasta</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Racores neumático en pasta')">Cotizar</button>
+</div>           
+             <div class="prod-card Refrigerante para radiador<">
+                <img src="img/Refrigerante para radiado 2.jpg" alt="Refrigerante para radiador<">
+                <h4>Refrigerante para radiador</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Refrigerante para radiador')">Cotizar</button>
+            </div>               
+             <div class="prod-card Refrigerante para radiador<">
+                <img src="img/Refrigerante para radiador.png" alt="Refrigerante para radiador<">
+                <h4>Refrigerante para radiador</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Refrigerante para radiador')">Cotizar</button>
+            </div>              
+             <div class="prod-card Racores en bronce<">
+                <img src="img/roqueres en bronce.jpg" alt="Racores en bronce<">
+                <h4>Racores en bronce</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Racores en bronce')">Cotizar</button>
+            </div>           
+             <div class="prod-card Sellador de bloque<">
+                <img src="img/sellador de bloque .jpg" alt="Sellador de bloque<">
+                <h4>Sellador de bloque</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Sellador de bloque')">Cotizar</button>
+            </div>             
+             <div class="prod-card Silicona grey<">
+                <img src="img/silicona grey.webp" alt="Silicona grey<">
+                <h4>Silicona grey</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Silicona grey')">Cotizar</button>
+            </div>              
+             <div class="prod-card Suncho para tanque<">
+                <img src="img/Suncho para tanque.png" alt="Suncho para tanque<">
+                <h4>Suncho para tanque</h4>
+                <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Suncho para tanque')">Cotizar</button>
+            </div>             
+<div class="prod-card Tapas">
+    <img src="img/Tapas de radiador.png" alt="Tapas de radiador">
+    <h4>Tapas de radiador</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Tapas de radiador')">Cotizar</button>
+</div>            
+             <div class="prod-card Tapas">
+    <img src="img/tapas para tanque combustible.jpeg" alt="Tapas para tanque combustible">
+    <h4>Tapas para tanque combustible</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Tapas para tanque combustible')">Cotizar</button>
+</div>           
+             <div class="prod-card Refrigerante">
+    <img src="img/Tarros auxiliar refrigeración 2.jpeg" alt="Tarros para auxiliar refrigeración">
+    <h4>Tarros para auxiliar refrigeración</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Tarros para auxiliar refrigeración')">Cotizar</button>
+</div>             
+             <div class="prod-card Refrigerante">
+    <img src="img/Tarros auxiliar refrigeración.png" alt="Tarros para auxiliar refrigeración">
+    <h4>Tarros para auxiliar refrigeración</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Tarros para auxiliar refrigeración')">Cotizar</button>
+</div>           
+             <div class="prod-card Correas">
+    <img src="img/tenzores para correas.jpg" alt="Tenzores para correas">
+    <h4>Tenzores para correas</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Tenzores para correas')">Cotizar</button>
+</div>         
+            <div class="prod-card Válvulas">
+    <img src="img/Valbulas sistema freno de aire.jpeg" alt="Válvulas sistema freno de aire">
+    <h4>Válvulas sistema freno de aire</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Válvulas sistema freno de aire')">Cotizar</button>
+</div>             
+             <div class="prod-card Balinera">
+    <img src="img/valineras.jpg" alt="Balinera">
+    <h4>Balinera</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Balinera')">Cotizar</button>
+</div>         
+             <div class="prod-card Ventiladores">
+    <img src="img/Ventiladores.png" alt="Ventiladores">
+    <h4>Ventiladores</h4>
+    <button class="btn-primary-sm" onclick="contactarWhatsApp('Cotización de Ventiladores')">Cotizar</button>
+</div>                                        
+    </section>
+
+    <!-- Emergencias -->
+    <section id="emergencias" class="emergency-section">
+        <div class="emergency-box">
+            <h2>Horario de atención</h2>
+            <p>Atención de Lunes a viernes de 6 am a 7 pm y Sábados - De 7 am a 4 pm Diagnóstico remoto por llamada.</p>
+            <button class="btn-emergency" onclick="llamarTaller()">📞 Agenda tú llamada</button>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <h2 class="section-title">Contáctanos / Visítanos</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Surtimangueras Chimitá</h3>
+                <p><strong>Ubicación:</strong> Zona Industrial Chimitá, Girón, Santander, Colombia</p>
+                <p><strong>Teléfono / WhatsApp:</strong> +57 318 274 0604</p>
+                <p><strong>Atención Taller:</strong> Lunes a viernes de 6 am a 7 pm y Sábados - De 7 am a 4 pm / Servicio de emergencia extendido</p>
+                <p><strong>Atención Especial:</strong> Asesoría personalizada para mecánicos, conductores y propietarios.</p>
+            </div>
+            <div class="contact-map">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Interactivo -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Título</h3>
+            <p id="modalDescription">Descripción del servicio...</p>
+            <button class="btn-primary" onclick="contactarWhatsApp('Consulta desde Modal')">Consultar por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Surtimangueras Chimitá - Calidad, Rapidez y Soluciones Mecánicas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
